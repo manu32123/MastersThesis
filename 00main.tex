@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%            Vorlage              %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 12pt, headsepline]{scrreprt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   Zusaetzliche Pakete  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{a4wide}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[bookmarks]{hyperref}
+\usepackage{setspace}
+\usepackage{mwe}
+\usepackage{lipsum}
+\usepackage{markdown}
+\usepackage{eurosym}
+\onehalfspacing
+%\renewcommand{\thesection}{\arabic{section}} %this removes chapter counting
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definition der Kopfzeile %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Definition des Deckblattes und der Titelseite  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{headings}
+
+\begin{document}
+
+
+\begin{titlepage}
+  \thispagestyle{empty}
+  \begin{center}
+      \rule{0.5\textwidth}{0.2ex}\\
+        \vspace*{\stretch{0.2}}
+        \sffamily\Large
+        \onehalfspacing
+        Leopold-Franzens-Universität Innsbruck
+        \\Institut für Statistik\\
+            \vspace*{\stretch{0.4}}
+    \includegraphics[width=2in]{siegel.png}\\
+         \vspace*{\stretch{0.4}}
+  \rule{\linewidth}{0.2ex}\\
+        \vspace*{\stretch{0.2}}
+    \hspace{1ex} 
+        \sffamily\Large
+    \onehalfspacing\textbf{\textit{Distributional Regression for \\Probabilistic Electricity Price Forecasting}}\\
+          \vspace*{\stretch{0.2}}
+
+  \rule{\linewidth}{0.2ex}\\
+         \vspace*{\stretch{1}}
+
+\sffamily\Large
+\textbf{\textit{Master's Thesis}} \\
+         \vspace*{\stretch{1}}
+
+\sffamily\normalsize
+\textbf{\textit\onehalfspacing{Author:}} Manuel Michael Weiler\\
+\textbf{\textit\onehalfspacing{Supervision:}} Nikolaus Umlauf, PhD\\
+\textbf{\textit\onehalfspacing{Date:}} March 09, 2020\\
+\vspace*{\stretch{0.3}}
+\end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+\section*{Abstract}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Beginn des Dokuments  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \tableofcontents
+  \listoffigures
+  \listoftables
+
+\setcounter{page}{1}
+  
+  %\include{kap_01}
+  %\chapter{Test Chapter}
+  %\markdownInput{test.Rmd}
+ 
+ \include{Introduction}
+\include{02_Dataset}
+
+\include{anhang}
+\include{bibliographie}
+\markboth{}{}
+\include{danksagung}
+
+
+\end{document}

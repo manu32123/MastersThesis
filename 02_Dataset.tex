@@ -1,0 +1,23 @@
+\chapter{Dataset}
+The data set used in the present thesis consists of renewable energy day-ahead auction data of Austria and Germany from EPEX SPOT SE, which was provided by the University of Innsbruck. Additionally, the day ahead load forecasts were downloaded from the European Network of Transmission System Operators' website and added to the auction data. Hourly temperature, wind speed and solar radiation forecasts for 2322 locations across Europe were included as well. Furthermore, the factor weekend was created, indicating if a certain day was on a weekend or not. The data set includes consecutive hourly observations over a period of 6 years, from the beginning of 2012 to the beginning of 2018, therefore resulting in a total of 52548 observations on 6975 variables. An overview of the dataset with descriptions of the variables is provided in tablex. 
+
+\begin{tabular}{ll}
+    Variable & Description \\
+    \hline
+    price   &   The electricity price (\euro/MWh). \\
+    volume  &   The trading volume. \\
+    hour    &   The hour of the day. \\
+    yday    &   The day of the year. \\
+    month   &   The month of the year. \\
+    year    &   The year. \\
+    date    &   The exact date. \\
+    weekend &   Factor, indicating if day is on a weekend. \\
+    T*      &   Temperature forecast for each hour for 2322 locations across Europe. \\
+    S*      &   Solar radiation forecast for each hour for 2322 locations across Europe. \\
+    W*      &   Wind speed forecast for each hour for 2322 locations across Europe. \\
+    load    &  The load forecast for the day and hour. \\
+\end{tabular}
+
+A first look at the data showed that load forecasts have been only available since the beginning of 2015, as can be seen in tablex below. Therefore, one important goal of data analysis was to reveal the importance of the load variable to understand if its inclusion justifies the removal of 50 \% of the observations. 
+
+In addition to the original data set, variable engineering was performed to create predictors, which might possibly increase the explanatory power and prediction accuracy of the statistical models built in later chapters. For this purpose lagged variables of the price and trading volumes were created.
